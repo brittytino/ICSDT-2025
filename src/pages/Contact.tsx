@@ -97,7 +97,7 @@ const Contact = () => {
                         <FormItem>
                           <FormLabel>Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="John Doe" {...field} />
+                            <Input placeholder="Your Name" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -110,7 +110,7 @@ const Contact = () => {
                         <FormItem>
                           <FormLabel>Email</FormLabel>
                           <FormControl>
-                            <Input placeholder="john@example.com" {...field} />
+                            <Input placeholder="Your Email" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -163,11 +163,12 @@ const Contact = () => {
                   <h3 className="text-lg font-semibold">Conference Information</h3>
                   <div className="flex items-center space-x-2 text-muted-foreground">
                     <Calendar className="h-4 w-4" />
-                    <span>February 15-17, 2025</span>
+                    <span>August 6, 2025</span>
                   </div>
                   <div className="flex items-center space-x-2 text-muted-foreground">
                     <MapPin className="h-4 w-4" />
-                    <span>Sri Ramakrishna College of Arts and Science, Coimbatore, India</span>
+                    <span>INTI UNIVERSITY
+                    Nilai, Malaysia</span>
                   </div>
                 </div>
                 <Separator />
@@ -179,7 +180,7 @@ const Contact = () => {
                   </div>
                   <div className="flex items-center space-x-2 text-muted-foreground">
                     <Phone className="h-4 w-4" />
-                    <span>+91 (422) 2560123</span>
+                    <span>+91 123456789</span>
                   </div>
                 </div>
                 <Separator />
@@ -215,9 +216,7 @@ const Contact = () => {
               </div>
             </div>
           </CardContent>
-          <CardFooter className="text-center text-sm text-muted-foreground">
-            © 2023 ICSDT 2025. All rights reserved.
-          </CardFooter>
+          
         </Card>
       </main>
       <Footer />

@@ -2,6 +2,7 @@ import { Footer } from "@/components/conference/Footer";
 import { Navbar } from "@/components/conference/Navbar";
 import { ChatbotWidget } from "@/components/conference/ChatbotWidget";
 import { Helmet } from 'react-helmet-async';
+import RegContent from "@/components/conference/RegContent";
 
 const Registration = () => {
   return (
@@ -37,6 +38,7 @@ const Registration = () => {
           />
         </div>
       </div>
+      <RegContent />
       <Footer />
       <ChatbotWidget />
     </div>

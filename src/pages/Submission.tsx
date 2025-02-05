@@ -1,5 +1,6 @@
 import { Footer } from "@/components/conference/Footer";
 import { Navbar } from "@/components/conference/Navbar";
+import SubContent from "@/components/conference/SubContent";
 import { ChatbotWidget } from "@/components/conference/ChatbotWidget";
 import { Helmet } from 'react-helmet-async';
 
@@ -37,6 +38,7 @@ const Submission = () => {
           />
         </div>
       </div>
+      <SubContent />
       <Footer />
       <ChatbotWidget />
     </div>
