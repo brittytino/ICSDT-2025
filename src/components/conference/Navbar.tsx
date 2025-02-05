@@ -32,7 +32,6 @@ export const Navbar = () => {
       dropdown: [
         { label: "Conference Venue", href: "/venue" },
         { label: "Program", href: "/program" },
-        { label: "Visa", href: "/visa" },
       ],
     },
     { label: "Contact", href: "/contact" },

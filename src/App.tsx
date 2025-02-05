@@ -8,7 +8,6 @@ import Index from "./pages/Index";
 import KeyNoteSpeakers from "./pages/KeyNoteSpeakers";
 import Committee from "./pages/Committee";
 import CFP from "./pages/CFP";
-import Visa from "./pages/Visa";
 import Registration from "./pages/Registration";
 import Submission from "./pages/Submission";
 import Program from "./pages/Program";
@@ -30,7 +29,6 @@ const App = () => (
             <Route path="/commitee" element={<Committee />} />
             <Route path="/speakers" element={<KeyNoteSpeakers />} />
             <Route path="/cfp" element={<CFP />} />
-            <Route path="/visa" element={<Visa />} />
             <Route path="/registration" element={<Registration />} />
             <Route path="/venue" element={<Venue />} />
             <Route path="/contact" element={<Contact />} />

@@ -2,6 +2,7 @@ import { Footer } from "@/components/conference/Footer";
 import { Navbar } from "@/components/conference/Navbar";
 import { ChatbotWidget } from "@/components/conference/ChatbotWidget";
 import { Helmet } from 'react-helmet-async';
+import ProgContent from "@/components/conference/ProgContent";
 
 const Program = () => {
   return (
@@ -27,16 +28,19 @@ const Program = () => {
         <link rel="canonical" href="https://icsdt2025.com" />
       </Helmet>
       <Navbar />
-      <div className="relative flex justify-center items-center h-screen bg-gray-900 overflow-hidden">
-        {/* Image */}
-        <div className="relative w-full h-full">
-          <img
-            src="/sub/7.png"
-            alt="Hero"
-            className="absolute w-full h-full object-cover transition-opacity duration-1000 opacity-100"
-          />
+      <div className="mt-16 w-full h-[120px] sm:h-[150px] md:h-[180px] flex items-center justify-center bg-gradient-to-r from-black to-[#e0a009] shadow-lg">
+        
+        {/* Hero Text */}
+        <div className="text-center text-white animate-fade-in">
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold">
+          Conference Program
+          </h1>
+          <p className="mt-1 text-xs sm:text-sm text-white/80">
+            Join us in shaping the future of <strong>Sustainable Digital Transformation</strong>!
+          </p>
         </div>
       </div>
+      <ProgContent />
       <Footer />
       <ChatbotWidget />
     </div>

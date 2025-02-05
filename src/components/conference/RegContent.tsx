@@ -15,9 +15,9 @@ const RegContent = () => {
   ];
 
   return (
-    <div className="flex min-h-screen bg-gray-100">
+    <div className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
       {/* Sidebar */}
-      <div className="w-full sm:w-80 hidden sm:block min-h-screen bg-white border-r border-gray-300 p-6 space-y-4 shadow-md flex flex-col sticky top-0">
+      <div className="lg:w-80 w-full bg-white border-r border-gray-300 p-6 space-y-4 shadow-md flex flex-col sticky top-0 lg:block hidden">
         {menuItems.map((item) => (
           <Link key={item.name} to={item.path}>
             <div
