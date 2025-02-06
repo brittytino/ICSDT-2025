@@ -2,6 +2,7 @@ import { Footer } from "@/components/conference/Footer";
 import { Navbar } from "@/components/conference/Navbar";
 import { ChatbotWidget } from "@/components/conference/ChatbotWidget";
 import { Helmet } from 'react-helmet-async';
+import ComContent from "@/components/conference/ComContent";
 
 const Committee = () => {
   return (
@@ -39,6 +40,7 @@ const Committee = () => {
           </p>
         </div>
       </div>
+      <ComContent />
       <Footer />
       <ChatbotWidget />
     </div>

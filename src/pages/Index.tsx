@@ -69,7 +69,6 @@ const Index = () => {
       <Objectives />
       <PaperSubmission />
       <Speakers />
-      <Schedule />
       <FAQ />
       <Footer />
       <ChatbotWidget />
