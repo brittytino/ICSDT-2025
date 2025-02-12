@@ -9,11 +9,11 @@ export default function SubContent() {
     const location = useLocation();  // Use location to check the active route
     
     const calendarDates = [
-      { event: "Submission Deadline", date: "February 1st, 2025" },
-      { event: "Notification Date", date: "February 20th, 2025" },
-      { event: "Registration Deadline", date: "March 01st, 2025" },
-      { event: "Camera Ready", date: "March 01st, 2025" },
-      { event: "Conference Dates", date: "March 28th-30th, 2025" },
+      { event: "Submission Deadline", date: "01 June, 2025" },
+      { event: "Notification Date", date: "20 May, 2025" },
+      { event: "Registration Deadline", date: "12 June, 2025" },
+      { event: "Camera Ready", date: "15 July, 2025" },
+      { event: "Conference Dates", date: "06, August 2025" },
     ];
   
     const menuItems = [
@@ -162,6 +162,11 @@ export default function SubContent() {
                 </TableBody>
               </Table>
             </CardContent>
+            <div className="flex justify-center">
+    <a href="/registration" className="px-6 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-md hover:bg-yellow-600 transition">
+      Submit Now
+    </a>
+  </div><br></br>
           </Card>
         </div>
       </div>

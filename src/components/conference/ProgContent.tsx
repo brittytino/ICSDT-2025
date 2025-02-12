@@ -57,7 +57,7 @@ const ProgContent = () => {
         {/* Friday */}
         <Card className="bg-white shadow-md rounded-lg p-6">
           <CardHeader>
-            <h4 className="text-xl font-bold text-indigo-600">Friday | 28 March, 2025</h4>
+            <h4 className="text-xl font-bold text-indigo-600">Wednesday | 06, August 2025</h4>
           </CardHeader>
           <CardContent>
             <ul className="space-y-4">
@@ -72,7 +72,7 @@ const ProgContent = () => {
         {/* Saturday */}
         <Card className="bg-white shadow-md rounded-lg p-6">
           <CardHeader>
-            <h4 className="text-xl font-bold text-indigo-600">Saturday | 29 March, 2025</h4>
+            <h4 className="text-xl font-bold text-indigo-600">Wednesday | 06, August 2025</h4>
           </CardHeader>
           <CardContent>
             <ul className="space-y-4">
@@ -131,7 +131,7 @@ const ProgContent = () => {
         {/* Sunday */}
         <Card className="bg-white shadow-md rounded-lg p-6">
           <CardHeader>
-            <h4 className="text-xl font-bold text-indigo-600">Sunday | 30 March, 2025</h4>
+            <h4 className="text-xl font-bold text-indigo-600">Wednesday | 06, August 2025</h4>
           </CardHeader>
           <CardContent>
             <ul className="space-y-4">

@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom"; // React Router imports
 import { FaFileAlt, FaRegFilePdf, FaClipboardList, FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
+import Committee from "./ComChairs"; // Import Committee component
 
 const ComContent = () => {
   const location = useLocation();
@@ -47,7 +48,7 @@ const ComContent = () => {
 
       {/* Main Content */}
       <main className="flex-1 p-6 sm:p-8 space-y-6">
-       
+        <Committee /> {/* Add Committee component */}
       </main>
     </div>
   );

@@ -68,23 +68,18 @@ const RegContent = () => {
           <tbody>
             <tr className="bg-white">
               <td className="border border-gray-300 px-4 py-2">Authors (Students)</td>
-              <td className="border border-gray-300 px-4 py-2">$550</td>
-              <td className="border border-gray-300 px-4 py-2">$580</td>
+              <td className="border border-gray-300 px-4 py-2">₹1500</td>
+              <td className="border border-gray-300 px-4 py-2">₹2000</td>
             </tr>
             <tr className="bg-gray-100">
-              <td className="border border-gray-300 px-4 py-2">Authors (Committees/Reviewers)</td>
-              <td className="border border-gray-300 px-4 py-2">$580</td>
-              <td className="border border-gray-300 px-4 py-2">$600</td>
+              <td className="border border-gray-300 px-4 py-2">Authors (Research Scholar/Faculty)</td>
+              <td className="border border-gray-300 px-4 py-2">₹3000</td>
+              <td className="border border-gray-300 px-4 py-2">₹3500</td>
             </tr>
             <tr className="bg-white">
-              <td className="border border-gray-300 px-4 py-2">Authors (Regular)</td>
-              <td className="border border-gray-300 px-4 py-2">$650</td>
-              <td className="border border-gray-300 px-4 py-2">$670</td>
-            </tr>
-            <tr className="bg-gray-100">
-              <td className="border border-gray-300 px-4 py-2">Presentation Only (Abstract)</td>
-              <td className="border border-gray-300 px-4 py-2">$380</td>
-              <td className="border border-gray-300 px-4 py-2">$400</td>
+              <td className="border border-gray-300 px-4 py-2">Authors (Industrial)</td>
+              <td className="border border-gray-300 px-4 py-2">₹7000</td>
+              <td className="border border-gray-300 px-4 py-2">₹7500</td>
             </tr>
           </tbody>
         </table>
