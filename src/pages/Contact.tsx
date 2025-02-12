@@ -80,6 +80,7 @@ const Contact = () => {
         <Card className="w-full max-w-4xl mx-auto">
           <CardHeader>
             <CardTitle className="text-3xl font-bold text-center">Contact ICSDT 2025</CardTitle>
+            <br></br>
             <CardDescription className="text-center text-lg mt-2">
               Have questions about the conference? Reach out to us using the form below or through our contact
               information.
