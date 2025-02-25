@@ -55,7 +55,7 @@ export const About = () => {
           <div className="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
             <div className="flex-shrink-0 md:w-1/2">
               <img
-                src="/about.png"
+                src="/about1.avif"
                 alt="About Conference"
                 className="rounded-2xl shadow-2xl w-full object-cover"
               />

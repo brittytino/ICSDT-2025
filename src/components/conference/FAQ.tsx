@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import faqImage from "/faq.png";
+import faqImage from "/faq1.jpg";
 
 export const FAQ = () => {
   const faqs = [
