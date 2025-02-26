@@ -1,14 +1,15 @@
-import { Link, useLocation } from "react-router-dom"; // React Router imports
+import { motion } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
 import { FaFileAlt, FaRegFilePdf, FaClipboardList, FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-import { FileText } from "lucide-react";
-import Committee from "./ComChairs"; // Import Committee component
-import { motion } from "framer-motion";
-import { Menu } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { FileText, Globe2, Users, BookOpen, Menu } from "lucide-react";
 
-
-const ComContent = () => {
+const AwardsContent = () => {
   const location = useLocation();
+
+
+
 
   const menuItems = [
     { name: "Call for Papers", path: "/cfp", icon: <FaFileAlt className="text-lg" /> },
@@ -79,13 +80,13 @@ const ComContent = () => {
           </div>
         </motion.aside>
 
-      {/* Main Content */}
-      <main className="flex-1 p-6 sm:p-8 space-y-6">
-        <Committee /> {/* Add Committee component */}
-      </main>
-    </div>
+        {/* Main Content */}
+        <main className="flex-1 lg:p-12 p-6">
+            <h1>Best Paper Awards (Track Wise) will facilitate the awardee with an appreciation certificate and other rewards.</h1>
+        </main>
+      </div>
     </div>
   );
 };
 
-export default ComContent;
+export default AwardsContent;

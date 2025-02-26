@@ -4,6 +4,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
 import { FaFileAlt, FaRegFilePdf, FaMapMarkerAlt, FaClipboardList, FaCalendarAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { Menu } from "lucide-react";
 
 export default function SubContent() {
     const location = useLocation();  // Use location to check the active route
@@ -17,43 +19,73 @@ export default function SubContent() {
     ];
   
     const menuItems = [
-      { name: "CALL FOR PAPERS", icon: <FaFileAlt className="mr-2" />, link: "/cfp" },
-      { name: "SUBMISSION", icon: <FaRegFilePdf className="mr-2" />, link: "/submission" },
-      { name: "REGISTRATION", icon: <FaClipboardList className="mr-2" />, link: "/registration" },
-      { name: "CONFERENCE VENUE", icon: <FaMapMarkerAlt className="mr-2" />, link: "/venue" },
-      { name: "PROGRAM", icon: <FaCalendarAlt className="mr-2" />, link: "/program" },
+      { name: "Call for Papers", path: "/cfp", icon: <FaFileAlt className="text-lg" /> },
+      { name: "Submission", path: "/submission", icon: <FaRegFilePdf className="text-lg" /> },
+      { name: "Registration", path: "/registration", icon: <FaClipboardList className="text-lg" /> },
+      { name: "Venue", path: "/venue", icon: <FaMapMarkerAlt className="text-lg" /> },
+      { name: "Program", path: "/program", icon: <FaCalendarAlt className="text-lg" /> },
     ];
   
     return (
-      <div className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
-        {/* Sidebar */}
-        <div className="lg:w-80 w-full bg-white border-r border-gray-300 p-6 space-y-4 shadow-md flex flex-col sticky top-0 lg:block hidden">
-          {menuItems.map((item) => (
-            <Link key={item.name} to={item.link}>
-              <div
-                className={`flex items-center p-3 cursor-pointer text-gray-700 hover:bg-blue-100 hover:text-blue-800 rounded-lg transition-all duration-300 ease-in-out font-medium text-lg ${
-                  location.pathname === item.link ? "bg-blue-50 text-blue-700 font-semibold" : ""
-                }`}
-              >
-                {item.icon}
-                {item.name}
-              </div>
-            </Link>
-          ))}
-  
-          <div className="mt-auto space-y-4 border-t pt-6">
-            <h3 className="font-semibold text-lg text-gray-900">Download Brochure</h3>
-            <p className="text-sm text-gray-600">Here are some useful documents</p>
-            <div className="space-y-2">
-              <Button variant="outline" className="w-full justify-start flex items-center gap-2 text-gray-700 border-gray-300 hover:bg-gray-100">
-                <FileText className="h-5 w-5 text-gray-600" /> DOWNLOAD TEMPLATE (WORD)
-              </Button>
-              <Button variant="outline" className="w-full justify-start flex items-center gap-2 text-gray-700 border-gray-300 hover:bg-gray-100">
-                <FileText className="h-5 w-5 text-gray-600" /> DOWNLOAD TEMPLATE (LATEX)
-              </Button>
-            </div>
-          </div>
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        {/* Mobile Menu Button */}
+        <div className="lg:hidden fixed bottom-6 right-6 z-50">
+          <Button className="rounded-full p-4 shadow-xl h-14 w-14" asChild>
+            <Menu className="h-6 w-6" />
+          </Button>
         </div>
+  
+        <div className="flex flex-col lg:flex-row">
+          {/* Sidebar */}
+          <motion.aside 
+            className="lg:w-80 w-full bg-white border-r border-gray-100 lg:p-8 p-6 space-y-4 shadow-xl lg:sticky lg:top-0 lg:h-screen"
+            initial={{ x: -100 }}
+            animate={{ x: 0 }}
+          >
+            <div className="space-y-6">
+              {menuItems.map((item) => (
+                <Link key={item.name} to={item.path}>
+                  <motion.div
+                    whileHover={{ x: 5 }}
+                    className={`flex items-center gap-3 p-3 rounded-xl transition-all ${
+                      location.pathname === item.path 
+                        ? "bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg"
+                        : "hover:bg-blue-50 text-gray-700"
+                    }`}
+                  >
+                    <span className="text-blue-500">{item.icon}</span>
+                    <span className="font-medium">{item.name}</span>
+                  </motion.div>
+                </Link>
+              ))}
+            </div>
+  
+            <div className="mt-12 space-y-6 border-t pt-8">
+              <h3 className="text-lg font-bold text-gray-900">Resources</h3>
+              <div className="space-y-3">
+                <Button 
+                  variant="outline" 
+                  className="w-full justify-start gap-3 rounded-xl py-5 border-blue-100 hover:border-blue-200 bg-white hover:bg-blue-50"
+                >
+                  <FileText className="h-5 w-5 text-blue-600" />
+                  <div className="text-left">
+                    <p className="font-medium">Download Template</p>
+                    <p className="text-sm text-gray-500">Microsoft Word</p>
+                  </div>
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="w-full justify-start gap-3 rounded-xl py-5 border-blue-100 hover:border-blue-200 bg-white hover:bg-blue-50"
+                >
+                  <FileText className="h-5 w-5 text-blue-600" />
+                  <div className="text-left">
+                    <p className="font-medium">Download Template</p>
+                    <p className="text-sm text-gray-500">LaTeX</p>
+                  </div>
+                </Button>
+              </div>
+            </div>
+          </motion.aside>
   
         {/* Main Content */}
         <div className="flex-1 p-6 sm:p-8 lg:p-10 space-y-6 lg:space-y-8">
@@ -169,6 +201,7 @@ export default function SubContent() {
   </div><br></br>
           </Card>
         </div>
+      </div>
       </div>
     );
   }

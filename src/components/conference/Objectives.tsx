@@ -26,19 +26,34 @@ export const Objectives = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-primary">Conference Objectives</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 relative overflow-hidden">
+      <div className="container mx-auto px-6">
+        {/* Title Section */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-extrabold text-gray-800">Conference Objectives</h2>
+          <p className="mt-2 text-lg text-gray-600">Empowering a sustainable digital future through collaboration and innovation.</p>
+        </div>
+
+        {/* Cards Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {objectives.map((objective, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <objective.icon className="h-5 w-5 text-primary" />
+            <Card
+              key={index}
+              className="group relative overflow-hidden rounded-xl bg-white shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            >
+              {/* Icon with Gradient Background */}
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 to-green-500"></div>
+
+              <CardHeader className="flex flex-col items-center text-center pt-8">
+                <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-green-500 text-white">
+                  <objective.icon className="h-8 w-8" />
+                </div>
+                <CardTitle className="mt-4 text-xl font-semibold text-gray-900">
                   {objective.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+
+              <CardContent className="pb-6 text-center">
                 <p className="text-gray-600">{objective.description}</p>
               </CardContent>
             </Card>

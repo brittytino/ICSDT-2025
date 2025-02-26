@@ -3,6 +3,7 @@ import { Footer } from "@/components/conference/Footer";
 import { ChatbotWidget } from "@/components/conference/ChatbotWidget";
 import { Helmet } from 'react-helmet-async';
 import SpContent from "@/components/conference/SpContent";
+import { Mic, Users } from "lucide-react";
 
 const KeyNoteSpeakers = () => {
   return (
@@ -17,14 +18,19 @@ const KeyNoteSpeakers = () => {
       <div className="mt-16 w-full h-[120px] sm:h-[150px] md:h-[180px] flex items-center justify-center bg-gradient-to-r from-black to-[#ea0b77] shadow-lg">
         
         {/* Hero Text */}
-        <div className="text-center text-white animate-fade-in">
+        <div className="text-center text-white animate-fade-in relative z-10">
+        <div className="flex justify-center items-center gap-2">
+          <Mic className="w-6 h-6 text-white" />
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold">
-            Keynote Speaker's
+            Keynote Speakers
           </h1>
-          <p className="mt-1 text-xs sm:text-sm text-white/80">
-            Join us in shaping the future of <strong>Sustainable Digital Transformation</strong>!
-          </p>
+          <Users className="w-6 h-6 text-[#09d31d]" />
         </div>
+        <p className="mt-2 text-xs sm:text-sm text-white/80 max-w-md mx-auto">
+          Gain insights from industry leaders on{" "}
+          <strong className="text-[#09d31d]">Sustainable Digital Transformation</strong>!
+        </p>
+      </div>
       </div>
       <SpContent />
       <Footer />

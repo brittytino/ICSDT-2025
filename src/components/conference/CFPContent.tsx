@@ -1,81 +1,14 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Accordion, AccordionItem } from "@/components/ui/accordion";
-import { FaBars } from "react-icons/fa";
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table";
-import { FileText } from "lucide-react";
-import { FaFileAlt, FaRegFilePdf, FaMapMarkerAlt, FaClipboardList, FaCalendarAlt } from "react-icons/fa";
-
-const topics = [
-  {
-    title: "Information Management & Systems",
-    items: [
-      "Business strategies & IS",
-      "Knowledge-based systems",
-      "Big data & analytics",
-      "Blockchain & Metaverse",
-      "E-Commerce & Digital Business",
-      "Software Engineering & IT Security",
-    ],
-  },
-  {
-    title: "Marketing Intelligence & Digital Marketing",
-    items: [
-      "Social media marketing",
-      "AI in marketing",
-      "Marketing analytics",
-      "Digital marketing & strategies",
-    ],
-  },
-  {
-    title: "Information Systems & Technology",
-    items: [
-      "Tourism management",
-      "Business Administration",
-      "Web Technology & Innovation",
-      "Financial & Banking Systems",
-    ],
-  },
-  {
-    title: "E-Business Engineering & Management",
-    items: [
-      "E-Commerce Models & Applications",
-      "Workflows & Transactions",
-      "Mobile Commerce & Security",
-      "Open Source in Business",
-    ],
-  },
-  {
-    title: "Green Marketing & Sustainable Business",
-    items: [
-      "Sustainable business strategies",
-      "Green marketing & innovation",
-      "Digital sustainability trends",
-    ],
-  },
-  {
-    title: "Human Resources & Digital HR",
-    items: [
-      "ICT & HR Management",
-      "Social media & recruitment",
-      "Digital HR strategies",
-    ],
-  },
-  {
-    title: "Metaverse & Business",
-    items: [
-      "Metaverse for business & industries",
-      "Metaverse analytics & case studies",
-    ],
-  },
-];
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { CheckCircle, Cloud, Cpu, Database, Globe, BookOpen, Calendar, FileText, Menu } from "lucide-react";
+import { Link } from "react-router-dom";
+import { FaFileAlt, FaRegFilePdf, FaClipboardList, FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
 
 export default function CallForPapers() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
-
   const calendarDates = [
     { event: "Submission Deadline", date: "February 1st, 2025" },
     { event: "Notification Date", date: "February 20th, 2025" },
@@ -84,98 +17,302 @@ export default function CallForPapers() {
     { event: "Conference Dates", date: "March 28th-30th, 2025" },
   ];
 
+  const tracks = [
+    {
+      title: "Sustainable AI & Intelligent Systems",
+      icon: <Cpu className="h-6 w-6" />,
+      items: [
+        "AI-driven solutions for sustainability & green computing",
+        "Machine learning for sustainable development",
+        "Big Data & IoT for smart cities",
+        "Renewable energy optimization using AI",
+        "Sustainable blockchain applications",
+      ],
+    },
+    {
+      title: "Digital Transformation & Smart Technologies",
+      icon: <Cloud className="h-6 w-6" />,
+      items: [
+        "Smart cities & digital governance",
+        "AI-powered healthcare innovations",
+        "5G, Edge & Cloud Computing",
+        "Cybersecurity & data privacy",
+        "Sustainable e-commerce & fintech",
+      ],
+    },
+    {
+      title: "Future Communication & Computing",
+      icon: <Database className="h-6 w-6" />,
+      items: [
+        "Next-gen networking (5G & 6G)",
+        "Quantum computing for sustainability",
+        "Green ICT & energy-efficient computing",
+        "Digital twins & simulation models",
+        "Sustainable computing architectures",
+      ],
+    },
+  ];
+
+  const submissions = [
+    {
+      type: "Full-Length Paper",
+      details: "Published in Springer LNNS (Scopus-indexed)",
+      requirements: "6-8 pages",
+      icon: <BookOpen className="h-5 w-5" />,
+    },
+    {
+      type: "Short Paper",
+      details: "Published in SBS proceedings (Google Scholar)",
+      requirements: "<6 pages",
+      icon: <BookOpen className="h-5 w-5" />,
+    },
+    {
+      type: "Abstract Only",
+      details: "Included in conference souvenir",
+      requirements: "500 words",
+      icon: <BookOpen className="h-5 w-5" />,
+    },
+    {
+      type: "Poster Presentation",
+      details: "Featured in e-souvenir",
+      requirements: "A3 format",
+      icon: <BookOpen className="h-5 w-5" />,
+    },
+  ];
+
   const menuItems = [
-    { name: "CALL FOR PAPERS", icon: <FaFileAlt className="mr-2" />, link: "/cfp" },
-    { name: "SUBMISSION", icon: <FaRegFilePdf className="mr-2" />, link: "/submission" },
-    { name: "REGISTRATION", icon: <FaClipboardList className="mr-2" />, link: "/registration" },
-    { name: "CONFERENCE VENUE", icon: <FaMapMarkerAlt className="mr-2" />, link: "/venue" },
-    { name: "PROGRAM", icon: <FaCalendarAlt className="mr-2" />, link: "/program" },
+    { name: "Call for Papers", path: "/cfp", icon: <FaFileAlt className="text-lg" /> },
+    { name: "Submission", path: "/submission", icon: <FaRegFilePdf className="text-lg" /> },
+    { name: "Registration", path: "/registration", icon: <FaClipboardList className="text-lg" /> },
+    { name: "Venue", path: "/venue", icon: <FaMapMarkerAlt className="text-lg" /> },
+    { name: "Program", path: "/program", icon: <FaCalendarAlt className="text-lg" /> },
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
-      {/* Sidebar */}
-      <div className="lg:w-80 w-full bg-white border-r border-gray-300 p-6 space-y-4 shadow-md flex flex-col sticky top-0 lg:block hidden">
-        {menuItems.map((item) => (
-          <Link key={item.name} to={item.link}>
-            <div
-              className={`flex items-center p-3 cursor-pointer text-gray-700 hover:bg-blue-100 hover:text-blue-800 rounded-lg transition-all duration-300 ease-in-out font-medium text-lg ${
-                location.pathname === item.link ? "bg-blue-50 text-blue-700 font-semibold" : ""
-              }`}
-            >
-              {item.icon}
-              {item.name}
-            </div>
-          </Link>
-        ))}
-
-        <div className="mt-auto space-y-4 border-t pt-6">
-          <h3 className="font-semibold text-lg text-gray-900">Download Brochure</h3>
-          <p className="text-sm text-gray-600">Here are some useful documents</p>
-          <div className="space-y-2">
-            <Button variant="outline" className="w-full justify-start flex items-center gap-2 text-gray-700 border-gray-300 hover:bg-gray-100">
-              <FileText className="h-5 w-5 text-gray-600" /> DOWNLOAD TEMPLATE (WORD)
-            </Button>
-            <Button variant="outline" className="w-full justify-start flex items-center gap-2 text-gray-700 border-gray-300 hover:bg-gray-100">
-              <FileText className="h-5 w-5 text-gray-600" /> DOWNLOAD TEMPLATE (LATEX)
-            </Button>
-          </div>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      {/* Mobile Menu Button */}
+      <div className="lg:hidden fixed bottom-6 right-6 z-50">
+        <Button className="rounded-full p-4 shadow-xl h-14 w-14" asChild>
+          <Menu className="h-6 w-6" />
+        </Button>
       </div>
 
-      {/* Main Content */}
-      <div className="lg:w-full w-full px-6 py-10 flex flex-col items-center">
-        <div className="max-w-3xl w-full space-y-6">
-          <div className="flex justify-between items-center w-full">
-            <h1 className="text-3xl font-bold text-gray-900">Call for Papers</h1>
-            
+      <div className="flex flex-col lg:flex-row">
+        {/* Sidebar */}
+        <motion.aside 
+          className="lg:w-80 w-full bg-white border-r border-gray-100 lg:p-8 p-6 space-y-4 shadow-xl lg:sticky lg:top-0 lg:h-screen"
+          initial={{ x: -100 }}
+          animate={{ x: 0 }}
+        >
+          <div className="space-y-6">
+            {menuItems.map((item) => (
+              <Link key={item.name} to={item.path}>
+                <motion.div
+                  whileHover={{ x: 5 }}
+                  className={`flex items-center gap-3 p-3 rounded-xl transition-all ${
+                    location.pathname === item.path 
+                      ? "bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg"
+                      : "hover:bg-blue-50 text-gray-700"
+                  }`}
+                >
+                  <span className="text-blue-500">{item.icon}</span>
+                  <span className="font-medium">{item.name}</span>
+                </motion.div>
+              </Link>
+            ))}
           </div>
 
-          <Accordion type="single" collapsible>
-            {topics.map((session, index) => (
-              <AccordionItem key={index} value={session.title}>
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-lg font-semibold">{session.title}</CardTitle>
+          <div className="mt-12 space-y-6 border-t pt-8">
+            <h3 className="text-lg font-bold text-gray-900">Resources</h3>
+            <div className="space-y-3">
+              <Button 
+                variant="outline" 
+                className="w-full justify-start gap-3 rounded-xl py-5 border-blue-100 hover:border-blue-200 bg-white hover:bg-blue-50"
+              >
+                <FileText className="h-5 w-5 text-blue-600" />
+                <div className="text-left">
+                  <p className="font-medium">Download Template</p>
+                  <p className="text-sm text-gray-500">Microsoft Word</p>
+                </div>
+              </Button>
+              <Button 
+                variant="outline" 
+                className="w-full justify-start gap-3 rounded-xl py-5 border-blue-100 hover:border-blue-200 bg-white hover:bg-blue-50"
+              >
+                <FileText className="h-5 w-5 text-blue-600" />
+                <div className="text-left">
+                  <p className="font-medium">Download Template</p>
+                  <p className="text-sm text-gray-500">LaTeX</p>
+                </div>
+              </Button>
+            </div>
+          </div>
+        </motion.aside>
+  
+          {/* Main Content */}
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50/20">
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-16"
+        >
+          <Badge variant="outline" className="mb-4 bg-blue-100 text-blue-600">
+            <Globe className="mr-2 h-4 w-4" /> Hybrid Event
+          </Badge>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            International Conference on Sustainable Digital Transformation 2025
+          </h1>
+          <div className="flex justify-center items-center gap-4 text-gray-600">
+            <div className="flex items-center">
+              <Calendar className="mr-2 h-5 w-5" />
+              <span>March 28-30, 2025</span>
+            </div>
+            <span>•</span>
+            <span>Sri Ramakrishna College of Arts & Science, Coimbatore</span>
+          </div>
+        </motion.div>
+
+        {/* Conference Overview */}
+        <section className="mb-16">
+          <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg">
+            <CardContent className="p-8">
+              <h2 className="text-2xl font-semibold mb-6 text-gray-800">Conference Overview</h2>
+              <div className="grid md:grid-cols-2 gap-8 text-gray-600">
+                <div className="space-y-4">
+                  <p>
+                    ICSDT 2025 brings together researchers, academicians, and industry professionals
+                    to discuss advancements in sustainable digital transformation. Featuring expert
+                    keynotes, panel discussions, and technical presentations.
+                  </p>
+                  <div className="flex items-center gap-2 bg-green-50 p-4 rounded-lg">
+                    <CheckCircle className="h-6 w-6 text-green-600" />
+                    <span className="text-green-700">
+                      Technically sponsored by Soft Computing Research Society
+                    </span>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="font-semibold text-gray-800">Publication Highlights</h3>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Scopus-indexed Springer Proceedings</li>
+                    <li>Extended papers in leading journals</li>
+                    <li>CCIS series publication</li>
+                    <li>Global visibility through Springer</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Tabs Section */}
+        <Tabs defaultValue="submissions" className="mb-16">
+          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-3 bg-gray-100">
+            <TabsTrigger value="submissions">Submission Types</TabsTrigger>
+            <TabsTrigger value="tracks">Conference Tracks</TabsTrigger>
+            <TabsTrigger value="publication">Publication Info</TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="submissions">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {submissions.map((sub, index) => (
+                <Card key={index} className="hover:shadow-md transition-shadow">
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center gap-3">
+                      {sub.icon}
+                      <CardTitle className="text-lg">{sub.type}</CardTitle>
+                    </div>
                   </CardHeader>
                   <CardContent>
-                    <ul className="list-disc pl-5 text-gray-700 space-y-2">
-                      {session.items.map((topic, i) => (
-                        <li key={i}>{topic}</li>
+                    <p className="text-sm text-gray-600 mb-2">{sub.details}</p>
+                    <Badge variant="outline" className="text-xs">
+                      {sub.requirements}
+                    </Badge>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </TabsContent>
+
+          <TabsContent value="tracks">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {tracks.map((track, index) => (
+                <Card key={index} className="bg-blue-50/20">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-4">
+                      {track.icon}
+                      <CardTitle className="text-lg">{track.title}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                      {track.items.map((item, i) => (
+                        <li key={i} className="text-sm">{item}</li>
                       ))}
                     </ul>
                   </CardContent>
                 </Card>
-              </AccordionItem>
-            ))}
-          </Accordion>
+              ))}
+            </div>
+          </TabsContent>
 
-          {/* Calendar Dates */}
-          <Card className="mt-6">
+          <TabsContent value="publication">
+            <Card className="bg-white/90 backdrop-blur-sm">
+              <CardContent className="p-8">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-lg font-semibold mb-4">Springer CCIS Series</h3>
+                    <ul className="space-y-3 text-gray-600">
+                      <li>✓ Scopus & EI Compendex Indexed</li>
+                      <li>✓ Rigorous peer-review process</li>
+                      <li>✓ Global distribution</li>
+                      <li>✓ Open Access options</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-4">Previous Conferences</h3>
+                    <div className="space-y-2 text-gray-600">
+                      <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
+                        <span>ICSDT 2024</span>
+                        <Badge variant="outline">Published</Badge>
+                      </div>
+                      {/* Add other years similarly */}
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+        </Tabs>
+
+        {/* Important Dates */}
+        <section className="mb-16">
+          <Card className="border-0 shadow-lg">
             <CardHeader>
-              <CardTitle className="text-lg font-semibold">Important Dates</CardTitle>
+              <CardTitle className="text-2xl font-semibold">Important Dates</CardTitle>
             </CardHeader>
             <CardContent>
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Event</TableHead>
-                    <TableHead>Date</TableHead>
+                    <TableHead className="w-[60%]">Event</TableHead>
+                    <TableHead className="text-right">Date</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   {calendarDates.map((date, index) => (
                     <TableRow key={index}>
                       <TableCell>{date.event}</TableCell>
-                      <TableCell>{date.date}</TableCell>
+                      <TableCell className="text-right">{date.date}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
               </Table>
             </CardContent>
           </Card>
-        </div>
+        </section>
       </div>
-    </div>
+    </div></div></div>
   );
 }

@@ -1,113 +1,134 @@
 import { Link, useLocation } from "react-router-dom"; // React Router imports
 import { FaFileAlt, FaRegFilePdf, FaClipboardList, FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-import { FileText } from "lucide-react";
+import { FileText, Mail, Phone, Menu } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Phone } from "lucide-react";
+import { motion } from "framer-motion";
 
 const SpContent = () => {
   const location = useLocation();
 
   const menuItems = [
-    { name: "CALL FOR PAPERS", path: "/cfp", icon: <FaFileAlt className="mr-3 text-xl" /> },
-    { name: "SUBMISSION", path: "/submission", icon: <FaRegFilePdf className="mr-3 text-xl" /> },
-    { name: "REGISTRATION", path: "/registration", icon: <FaClipboardList className="mr-3 text-xl" /> },
-    { name: "CONFERENCE VENUE", path: "/venue", icon: <FaMapMarkerAlt className="mr-3 text-xl" /> },
-    { name: "PROGRAM", path: "/program", icon: <FaCalendarAlt className="mr-3 text-xl" /> },
+    { name: "Call for Papers", path: "/cfp", icon: <FaFileAlt className="text-lg" /> },
+    { name: "Submission", path: "/submission", icon: <FaRegFilePdf className="text-lg" /> },
+    { name: "Registration", path: "/registration", icon: <FaClipboardList className="text-lg" /> },
+    { name: "Venue", path: "/venue", icon: <FaMapMarkerAlt className="text-lg" /> },
+    { name: "Program", path: "/program", icon: <FaCalendarAlt className="text-lg" /> },
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
-      {/* Sidebar */}
-      <div className="lg:w-80 w-full bg-white border-r border-gray-300 p-6 space-y-4 shadow-md flex flex-col sticky top-0 lg:block hidden">
-        {menuItems.map((item) => (
-          <Link key={item.name} to={item.path}>
-            <div
-              className={`flex items-center p-3 cursor-pointer text-gray-700 hover:bg-blue-100 hover:text-blue-800 rounded-lg transition-all duration-300 ease-in-out font-medium text-lg ${
-                location.pathname === item.path ? "bg-blue-50 text-blue-700 font-semibold" : ""
-              }`}
-            >
-              {item.icon}
-              {item.name}
-            </div>
-          </Link>
-        ))}
-
-        <div className="mt-auto space-y-4 border-t pt-6">
-          <h3 className="font-semibold text-lg text-gray-900">Download Brochure</h3>
-          <p className="text-sm text-gray-600">Here are some useful documents</p>
-          <div className="space-y-2">
-            <Button variant="outline" className="w-full justify-start flex items-center gap-2 text-gray-700 border-gray-300 hover:bg-gray-100">
-              <FileText className="h-5 w-5 text-gray-600" /> DOWNLOAD TEMPLATE (WORD)
-            </Button>
-            <Button variant="outline" className="w-full justify-start flex items-center gap-2 text-gray-700 border-gray-300 hover:bg-gray-100">
-              <FileText className="h-5 w-5 text-gray-600" /> DOWNLOAD TEMPLATE (LATEX)
-            </Button>
-          </div>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      {/* Mobile Menu Button */}
+      <div className="lg:hidden fixed bottom-6 right-6 z-50">
+        <Button className="rounded-full p-4 shadow-xl h-14 w-14" asChild>
+          <Menu className="h-6 w-6" />
+        </Button>
       </div>
 
-      {/* Main Content */}
-      <main className="flex-1 p-6 sm:p-8 space-y-6">
-      <div className="flex justify-center items-center min-h-screen bg-gray-100 p-6">
-      <Card className="w-full max-w-4xl rounded-2xl shadow-xl bg-white">
-        <CardHeader className="flex flex-col items-center text-center">
-          <img
-            src="/tengku.jpeg"
-            alt="Prof. Emeritus Dato' Ts. Dr. Tengku Mohd Bin Tengku Sembok"
-            className="w-32 h-32 rounded-full border-4 border-gray-300 object-cover"
-          />
-          <CardTitle className="mt-4 text-2xl font-semibold text-gray-800">
-            Prof. Emeritus Dato' Ts. Dr. Tengku Mohd Bin Tengku Sembok
-          </CardTitle>
-          <p className="text-gray-600">Professor, IIUM Gombak Campus</p>
-          <p className="text-gray-500">Kulliyyah of Information and Communication Technology</p>
-          <div className="flex gap-2 mt-3">
-            <Badge variant="outline">Computation Theory</Badge>
-            <Badge variant="outline">AI & NLP</Badge>
-            <Badge variant="outline">Information Retrieval</Badge>
+      <div className="flex flex-col lg:flex-row">
+        {/* Sidebar */}
+        <motion.aside
+          className="lg:w-80 w-full bg-white border-r border-gray-100 lg:p-8 p-6 space-y-4 shadow-xl lg:sticky lg:top-0 lg:h-screen"
+          initial={{ x: -100 }}
+          animate={{ x: 0 }}
+        >
+          <div className="space-y-6">
+            {menuItems.map((item) => (
+              <Link key={item.name} to={item.path}>
+                <motion.div
+                  whileHover={{ x: 5 }}
+                  className={`flex items-center gap-3 p-3 rounded-xl transition-all ${
+                    location.pathname === item.path
+                      ? "bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg"
+                      : "hover:bg-blue-50 text-gray-700"
+                  }`}
+                >
+                  <span className="text-blue-500">{item.icon}</span>
+                  <span className="font-medium">{item.name}</span>
+                </motion.div>
+              </Link>
+            ))}
           </div>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4 text-gray-700">
-            <div>
-              <h3 className="text-lg font-semibold">Specializations</h3>
-              <ul className="list-disc pl-5 text-sm">
-                <li>Computation Theory & Algorithm Analysis</li>
-                <li>Artificial Intelligence & Natural Language Processing</li>
-                <li>Computational Linguistics & Semantics</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold">Academic Qualifications</h3>
-              <ul className="list-disc pl-5 text-sm">
-                <li>PhD in Computer Science - Glasgow University</li>
-                <li>MS in Computer Science - Iowa University</li>
-                <li>PostGrad Diploma in Islamic Studies - UKM</li>
-                <li>BSc in Computer Science - Brighton University</li>
-                <li>Diploma in Computer Science - MARA Institute of Technology</li>
-              </ul>
-            </div>
-            <div className="flex items-center gap-4">
-              <a
-                href="mailto:tmts@iium.edu.my"
-                className="flex items-center gap-2 text-blue-600 hover:underline"
-              >
-                <Mail size={18} /> tmts@iium.edu.my
-              </a>
-              <span className="flex items-center gap-2 text-gray-600">
-                <Phone size={18} /> 6435
-              </span>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-       
-      </main>
+        </motion.aside>
+
+        {/* Main Content */}
+        <main className="flex-1 p-6 sm:p-8 space-y-6">
+          <Speakers />
+        </main>
+      </div>
     </div>
   );
 };
+
+const speakers = [
+  {
+    name: "Prof. Emeritus Dato' Ts. Dr. Tengku Mohd Bin Tengku Sembok",
+    title: "Professor, IIUM Gombak Campus",
+    affiliation: "Kulliyyah of Information and Communication Technology",
+    image: "/tengku.jpeg",
+    specializations: ["Computation Theory", "AI & NLP", "Information Retrieval"],
+    email: "tmts@iium.edu.my",
+  },
+  {
+    name: "Dr. Mijal Mistry",
+    title: "Software Developer",
+    affiliation: "Infotech IT Solutions, Canada",
+    image: "/mij.jpeg",
+    specializations: ["Software Development", "Cloud Computing", "AI Solutions"],
+    email: "mijal@infotech.com",
+  },
+  {
+    name: "Mr. Unknown",
+    title: "Mobile and Web Application Architect",
+    affiliation: "moxDroid Labs Inc., Toronto, Canada",
+    image: "/mob.jpg",
+    specializations: ["Mobile Development", "Full Stack Development", "AI & ML"],
+    email: "tino@moxdroid.com",
+  },
+];
+
+const Speakers = () => {
+  return (
+    <div className="p-6 bg-gray-100 min-h-screen">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {speakers.map((speaker, index) => (
+          <Card key={index} className="rounded-2xl shadow-lg bg-white transition-transform transform hover:scale-105">
+            <CardHeader className="flex flex-col items-center text-center">
+              <img
+                src={speaker.image}
+                alt={speaker.name}
+                className="w-32 h-32 rounded-full border-4 border-gray-300 object-cover"
+              />
+              <CardTitle className="mt-4 text-xl font-semibold text-gray-800">
+                {speaker.name}
+              </CardTitle>
+              <p className="text-gray-600">{speaker.title}</p>
+              <p className="text-gray-500">{speaker.affiliation}</p>
+              <div className="flex flex-wrap justify-center gap-2 mt-3">
+                {speaker.specializations.map((spec, i) => (
+                  <Badge key={i} variant="outline" className="px-3 py-1 text-sm">
+                    {spec}
+                  </Badge>
+                ))}
+              </div>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-col items-center gap-3 text-gray-700">
+                <a
+                  href={`mailto:${speaker.email}`}
+                  className="flex items-center gap-2 text-blue-600 hover:underline"
+                >
+                  <Mail size={18} /> {speaker.email}
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 
 export default SpContent;

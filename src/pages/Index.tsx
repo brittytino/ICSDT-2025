@@ -1,9 +1,7 @@
 import { Hero } from "@/components/conference/Hero";
-import { About } from "@/components/conference/About";
 import { Speakers } from "@/components/conference/Speakers";
 import { Schedule } from "@/components/conference/Schedule";
 import { Footer } from "@/components/conference/Footer";
-import { PaperSubmission } from "@/components/conference/PaperSubmission";
 import { Objectives } from "@/components/conference/Objectives";
 import { Navbar } from "@/components/conference/Navbar";
 import { Collaboration } from "@/components/conference/Collaboration";
@@ -64,10 +62,8 @@ const Index = () => {
       </Helmet>
       <Navbar />
       <Hero />
-      <About />
       <Collaboration />
       <Objectives />
-      <PaperSubmission />
       <Speakers />
       <FAQ />
       <Footer />
