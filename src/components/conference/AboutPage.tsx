@@ -1,9 +1,157 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import { FaFileAlt, FaRegFilePdf, FaClipboardList, FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
+import { FaFileAlt, FaRegFilePdf, FaClipboardList, FaMapMarkerAlt, FaCalendarAlt, FaUniversity, FaHandshake, FaGlobe, FaChalkboardTeacher } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { FileText, Globe2, Users, BookOpen, Menu } from "lucide-react";
+
+const ConferenceSection = () => {
+  const college1 = {
+    name: "Sri Ramakrishna College of Arts and Science",
+    location: "Coimbatore, India",
+    established: 1987,
+    students: "6500+",
+    programs: "30+",
+    accreditation: "NAAC A+",
+    ranking: "NIRF 56th (2024)",
+    facilities: "16-acre campus, Cricket Stadium",
+    highlights: [
+      "Swachhta Ranking Awardee",
+      "ASSOCHAM Best Private College",
+      "ISO 9001:2015 Certified"
+    ]
+  };
+
+  const college2 = {
+    name: "INTI International University",
+    location: "Nilai, Malaysia",
+    established: 1986,
+    students: "15,000+",
+    programs: "100+",
+    accreditation: "MQA Certified",
+    ranking: "4-Star SETARA",
+    facilities: "82-acre campus, Multiple branches",
+    highlights: [
+      "Hope Education Group",
+      "Laureate International Network",
+      "International Student Community"
+    ]
+  };
+
+  const collaboration = {
+    title: "3rd International Conference on Sustainable Digital Transformation 2025",
+    date: "6th August 2025",
+    mode: "Hybrid Mode Conference",
+    themes: [
+      "Green Technologies",
+      "Digital Sustainability",
+      "AI for Social Good",
+      "Cyber-Physical Systems"
+    ]
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-12 px-4 sm:px-6 lg:px-8">
+      {/* Conference Header */}
+      
+
+      {/* Colleges Grid */}
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 mb-16">
+        {/* Indian College Card */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+          <div className="flex items-center gap-4 mb-6">
+            <FaUniversity className="text-blue-600 text-3xl" />
+            <h2 className="text-2xl font-bold text-gray-800">{college1.name}</h2>
+          </div>
+          <div className="space-y-4 text-gray-600">
+            <p className="flex items-center gap-2">
+              <span className="font-semibold w-28">Established:</span>
+              {college1.established}
+            </p>
+            <p><span className="font-semibold">Ranking:</span> {college1.ranking}</p>
+            <p><span className="font-semibold">Accreditation:</span> {college1.accreditation}</p>
+            <div className="mt-6">
+              <h3 className="text-lg font-semibold mb-2 text-green-600">Highlights:</h3>
+              <ul className="list-disc list-inside space-y-1">
+                {college1.highlights.map((highlight, index) => (
+                  <li key={index}>{highlight}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Malaysian College Card */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+          <div className="flex items-center gap-4 mb-6">
+            <FaUniversity className="text-red-600 text-3xl" />
+            <h2 className="text-2xl font-bold text-gray-800">{college2.name}</h2>
+          </div>
+          <div className="space-y-4 text-gray-600">
+            <p className="flex items-center gap-2">
+              <span className="font-semibold w-28">Established:</span>
+              {college2.established}
+            </p>
+            <p><span className="font-semibold">Ranking:</span> {college2.ranking}</p>
+            <p><span className="font-semibold">Accreditation:</span> {college2.accreditation}</p>
+            <div className="mt-6">
+              <h3 className="text-lg font-semibold mb-2 text-green-600">Highlights:</h3>
+              <ul className="list-disc list-inside space-y-1">
+                {college2.highlights.map((highlight, index) => (
+                  <li key={index}>{highlight}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Collaboration Section */}
+      <div className="max-w-7xl mx-auto bg-white rounded-2xl shadow-xl p-8">
+        <h2 className="text-3xl font-bold text-center mb-8 flex items-center justify-center gap-4">
+          <FaChalkboardTeacher className="text-blue-600" />
+          Conference Highlights
+        </h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-green-600">Key Themes:</h3>
+            <ul className="list-disc list-inside space-y-2">
+              {collaboration.themes.map((theme, index) => (
+                <li key={index} className="text-gray-600">{theme}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="space-y-6">
+            <div className="bg-blue-50 p-6 rounded-xl">
+              <h3 className="text-lg font-semibold mb-2">Conference Format:</h3>
+              <p className="text-gray-600">
+                Hybrid mode with both physical venues at {college1.location} and {college2.location}, 
+                combined with virtual participation options.
+              </p>
+            </div>
+            <div className="bg-green-50 p-6 rounded-xl">
+              <h3 className="text-lg font-semibold mb-2">Expected Participants:</h3>
+              <p className="text-gray-600">
+                500+ attendees including academicians, industry experts, and researchers from 30+ countries
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="max-w-7xl mx-auto mt-12 text-center">
+  <Link to="/registration">
+    <Button className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-3 rounded-lg 
+      font-semibold hover:from-blue-700 hover:to-green-700 transition-all duration-300
+      shadow-lg hover:shadow-xl">
+      Register Now for Conference
+    </Button>
+  </Link>
+</div>
+    </div>
+  );
+};
 
 const AboutPage = () => {
   const location = useLocation();
@@ -91,38 +239,9 @@ const AboutPage = () => {
 
         {/* Main Content */}
         <main className="flex-1 lg:p-12 p-6">
-          {/* Hero Section */}
-          <motion.section 
-            className="rounded-3xl bg-gradient-to-br from-blue-600 to-blue-700 text-white p-8 mb-16 shadow-2xl"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-          >
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-center">
-              <div className="flex-1">
-                <h1 className="text-4xl font-bold mb-6 leading-tight">
-                  Shaping the Future of Sustainable Technology
-                </h1>
-                <div className="flex flex-wrap gap-3">
-                  {topics.map((topic) => (
-                    <motion.span
-                      key={topic}
-                      whileHover={{ scale: 1.05 }}
-                      className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium hover:bg-white/20 transition"
-                    >
-                      {topic}
-                    </motion.span>
-                  ))}
-                </div>
-              </div>
-              <div className="flex-1">
-                <img
-                  src="/about1.avif"
-                  alt="Conference"
-                  className="rounded-2xl shadow-xl border-4 border-white/20"
-                />
-              </div>
-            </div>
-          </motion.section>
+          <ConferenceSection />
+
+          
 
           {/* Stats Section */}
           <motion.section 

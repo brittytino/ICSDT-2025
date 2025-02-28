@@ -19,8 +19,8 @@ const committeeData = [
     title: "Program Committee Co-chairs",
     members: [
       "Dr. Malathy, INTI University, Malaysia",
-      "Dr. M. Hemalatha, Sri Ramakrishna College of Arts & Science, Tamilnadu India",
-      "Dr. M. Mahendiren, Sri Ramakrishna College of Arts & Science, Tamilnadu India",
+      "Dr. M. Hemalatha, Associate Professor, Sri Ramakrishna College of Arts & Science, Tamilnadu India",
+      "Dr. N. Mahendiran , Assistant Professor, Sri Ramakrishna College of Arts & Science, Tamilnadu India",
     ],
   },
   {
@@ -65,8 +65,8 @@ const committeeData = [
     title: "Publicity Chairs",
     members: [
       "INTI University, Malaysia",
-      "Prof. SunilSir, Sri Ramakrishna College of Arts & Science",
-      "Dr. M. Mahendiren, Sri Ramakrishna College of Arts & Science, Tamilnadu India",
+      "Mr.A.Sunil Samson M.Sc.,M.Phil, Sri Ramakrishna College of Arts & Science",
+      "Dr. N. Mahendiran,Assistant Professor,MCA,M.Phil,Ph.D, Sri Ramakrishna College of Arts & Science, Tamilnadu India",
     ],
   },
   {

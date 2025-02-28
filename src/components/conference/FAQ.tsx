@@ -25,17 +25,17 @@ export const FAQ = () => {
     {
       question: "What are the key dates?",
       answer:
-        "Paper submission deadline: May 2, 2025\nAcceptance notification: January 15, 2025\nCamera-ready submission: August 1, 2025",
+        "Paper submission deadline: May 2, 2025\nAcceptance notification: Jun 15, 2025\nCamera-ready submission: July 5, 2025",
     },
     {
       question: "How can I register for the conference?",
       answer:
-        "Registration can be completed through our online portal. Early bird registration will be available until June 1, 2025.",
+        "Registration can be completed through our online portal. Early bird registration will be available.",
     },
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-100 to-white">
+    <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
         <div className="md:w-1/2 space-y-6">
           <h2 className="text-4xl font-bold text-primary mb-6">Frequently Asked Questions</h2>

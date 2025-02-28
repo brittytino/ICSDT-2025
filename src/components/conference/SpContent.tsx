@@ -79,7 +79,7 @@ const speakers = [
     email: "mijal@infotech.com",
   },
   {
-    name: "Mr. Unknown",
+    name: "Mr. Sujal Patel",
     title: "Mobile and Web Application Architect",
     affiliation: "moxDroid Labs Inc., Toronto, Canada",
     image: "/mob.jpg",

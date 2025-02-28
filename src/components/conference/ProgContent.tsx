@@ -87,20 +87,7 @@ const ProgContent = () => {
       <div className="bg-gray-50 rounded-lg p-8 shadow-lg space-y-8">
         <h3 className="text-2xl font-semibold text-gray-700 text-center">Program at a Glance</h3>
 
-        {/* Friday */}
-        <Card className="bg-white shadow-md rounded-lg p-6">
-          <CardHeader>
-            <h4 className="text-xl font-bold text-indigo-600">Wednesday | 06, August 2025</h4>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-4">
-              <li className="flex justify-between text-gray-700">
-                <span>10:00-16:00</span>
-                <span>Sign-in and Conference Kit Collection</span>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+      
 
         {/* Saturday */}
         <Card className="bg-white shadow-md rounded-lg p-6">
@@ -111,7 +98,7 @@ const ProgContent = () => {
             <ul className="space-y-4">
               <li className="flex justify-between text-gray-700">
                 <span>9:00-9:05</span>
-                <span>Opening Remark by Prof. Shuliang Li</span>
+                <span>Opening Remark </span>
               </li>
               <li className="flex justify-between text-gray-700">
                 <span>9:05-9:50</span>
@@ -135,70 +122,26 @@ const ProgContent = () => {
               </li>
               <li className="flex justify-between text-gray-700">
                 <span>13:30-16:30</span>
-                <span>Session 1 for Onsite Participants</span>
+                <span>Session 1 </span>
               </li>
               <li className="flex justify-between text-gray-700">
                 <span>13:00-14:45</span>
-                <span>Session 2 - Data Science and Computational Analytics</span>
+                <span>Session 2 </span>
               </li>
               <li className="flex justify-between text-gray-700">
                 <span>13:00-14:45</span>
-                <span>Session 4 - Science Technology and Management</span>
+                <span>Session 3 </span>
               </li>
               <li className="flex justify-between text-gray-700">
                 <span>15:00-17:00</span>
-                <span>Session 3 - Intelligent Information System and Management</span>
+                <span>Session 4 </span>
               </li>
-              <li className="flex justify-between text-gray-700">
-                <span>15:00-17:00</span>
-                <span>Session 5 - Enterprise Operation and Management</span>
-              </li>
-              <li className="flex justify-between text-gray-700">
-                <span>17:30-18:30</span>
-                <span>Dinner</span>
-              </li>
+              
             </ul>
           </CardContent>
         </Card>
 
-        {/* Sunday */}
-        <Card className="bg-white shadow-md rounded-lg p-6">
-          <CardHeader>
-            <h4 className="text-xl font-bold text-indigo-600">Wednesday | 06, August 2025</h4>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-4">
-              <li className="flex justify-between text-gray-700">
-                <span>9:00-9:45</span>
-                <span>Keynote Speaker IV</span>
-              </li>
-              <li className="flex justify-between text-gray-700">
-                <span>9:45-10:30</span>
-                <span>Keynote Speech V</span>
-              </li>
-              <li className="flex justify-between text-gray-700">
-                <span>10:45-12:45</span>
-                <span>Session 6 - Talent Training and Engineering Education</span>
-              </li>
-              <li className="flex justify-between text-gray-700">
-                <span>13:00-14:45</span>
-                <span>Session 7 - International Economy and Trading</span>
-              </li>
-              <li className="flex justify-between text-gray-700">
-                <span>13:00-14:45</span>
-                <span>Session 8 - Commodity Economics and Services</span>
-              </li>
-              <li className="flex justify-between text-gray-700">
-                <span>15:00-16:45</span>
-                <span>Session 9 - Industrial Production and Management</span>
-              </li>
-              <li className="flex justify-between text-gray-700">
-                <span>15:00-16:45</span>
-                <span>Session 10 - Industrial Manufacturing and Logistics</span>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+ 
       </div>
     </div>
       </main>

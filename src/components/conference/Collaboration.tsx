@@ -3,7 +3,7 @@ import { HandshakeIcon } from "lucide-react";
 
 export const Collaboration = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
       {/* Decorative gradient overlay */}
       <div className="absolute inset-0 opacity-15 pointer-events-none">
         <div className="absolute -top-32 left-1/2 w-[800px] h-[800px] -translate-x-1/2 bg-[radial-gradient(theme(colors.primary)_20%,transparent_70%)] mix-blend-overlay" />

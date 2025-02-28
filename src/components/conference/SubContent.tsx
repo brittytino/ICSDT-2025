@@ -11,10 +11,9 @@ export default function SubContent() {
     const location = useLocation();  // Use location to check the active route
     
     const calendarDates = [
-      { event: "Submission Deadline", date: "01 June, 2025" },
-      { event: "Notification Date", date: "20 May, 2025" },
-      { event: "Registration Deadline", date: "12 June, 2025" },
-      { event: "Camera Ready", date: "15 July, 2025" },
+      { event: "Submission Deadline", date: "02 May, 2025" },
+      { event: "Acceptance Notification Date", date: "15 June, 2025" },
+      { event: "Camera Ready", date: "5 July, 2025" },
       { event: "Conference Dates", date: "06, August 2025" },
     ];
   

@@ -57,7 +57,7 @@ export const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="mt-6 text-center text-xs opacity-70 border-t border-gray-700 pt-4">
-        © 2025 ICSDT. All rights reserved.
+      <a href="https://tinobritty.tech"> © 2025 All rights reserved</a>
       </div>
     </footer>
   );
