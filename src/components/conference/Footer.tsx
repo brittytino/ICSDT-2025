@@ -57,7 +57,7 @@ export const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="mt-6 text-center text-xs opacity-70 border-t border-gray-700 pt-4">
-      <a href="https://tinobritty.tech"> © 2025 All rights reserved</a>
+      <a href="https://tinobritty.tech"> © 2025 All rights reserved :)</a>
       </div>
     </footer>
   );
