@@ -26,13 +26,15 @@ export const Footer = () => {
           </div>
           <div className="flex items-center space-x-2">
             <Mail className="h-4 w-4 text-red-400" />
-            <a href="mailto:mariaprisiclla@srcas.ac.in" className="hover:text-white transition">
-              mariaprisiclla@srcas.ac.in
+            <a href="mailto:springerconference@srcas.ac.in" className="hover:text-white transition">
+            springerconference@srcas.ac.in
             </a>
           </div>
           <div className="flex items-center space-x-2">
             <Phone className="h-4 w-4 text-green-400" />
-            <span>+91 98431 69009</span>
+            <span>+91 98430 99676</span>
+            <Phone className="h-4 w-4 text-green-400" />
+            <span>+91 99522 73425</span>
           </div>
         </div>
 

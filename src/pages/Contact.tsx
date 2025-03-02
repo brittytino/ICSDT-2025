@@ -177,11 +177,13 @@ const Contact = () => {
                   <h3 className="text-lg font-semibold">Contact Information</h3>
                   <div className="flex items-center space-x-2 text-muted-foreground">
                     <Mail className="h-4 w-4" />
-                    <span>contact@icsdt2025.com</span>
+                    <span>springerconference@srcas.ac.in</span>
                   </div>
                   <div className="flex items-center space-x-2 text-muted-foreground">
                     <Phone className="h-4 w-4" />
-                    <span>+91 123456789</span>
+                    <span>+91 98430 99676</span>
+                    <Phone className="h-4 w-4" />
+                    <span>+91 99522 73425</span>
                   </div>
                 </div>
                 <Separator />

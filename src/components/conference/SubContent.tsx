@@ -60,30 +60,34 @@ export default function SubContent() {
             </div>
   
             <div className="mt-12 space-y-6 border-t pt-8">
-              <h3 className="text-lg font-bold text-gray-900">Resources</h3>
-              <div className="space-y-3">
-                <Button 
-                  variant="outline" 
-                  className="w-full justify-start gap-3 rounded-xl py-5 border-blue-100 hover:border-blue-200 bg-white hover:bg-blue-50"
-                >
-                  <FileText className="h-5 w-5 text-blue-600" />
-                  <div className="text-left">
-                    <p className="font-medium">Download Template</p>
-                    <p className="text-sm text-gray-500">Microsoft Word</p>
-                  </div>
-                </Button>
-                <Button 
-                  variant="outline" 
-                  className="w-full justify-start gap-3 rounded-xl py-5 border-blue-100 hover:border-blue-200 bg-white hover:bg-blue-50"
-                >
-                  <FileText className="h-5 w-5 text-blue-600" />
-                  <div className="text-left">
-                    <p className="font-medium">Download Template</p>
-                    <p className="text-sm text-gray-500">LaTeX</p>
-                  </div>
-                </Button>
-              </div>
-            </div>
+  <h3 className="text-lg font-bold text-gray-900">Resources</h3>
+  <div className="space-y-3">
+    <a href="/public/conference-template.docx" download className="block">
+      <Button 
+        variant="outline" 
+        className="w-full justify-start gap-3 rounded-xl py-5 border-blue-100 hover:border-blue-200 bg-white hover:bg-blue-50"
+      >
+        <FileText className="h-5 w-5 text-blue-600" />
+        <div className="text-left">
+          <p className="font-medium">Download Template</p>
+          <p className="text-sm text-gray-500">Microsoft Word</p>
+        </div>
+      </Button>
+    </a>
+    <a href="/public/templates/conference-latex-template.zip" download className="block mt-3">
+      <Button 
+        variant="outline" 
+        className="w-full justify-start gap-3 rounded-xl py-5 border-blue-100 hover:border-blue-200 bg-white hover:bg-blue-50"
+      >
+        <FileText className="h-5 w-5 text-blue-600" />
+        <div className="text-left">
+          <p className="font-medium">Download Template</p>
+          <p className="text-sm text-gray-500">LaTeX</p>
+        </div>
+      </Button>
+    </a>
+  </div>
+</div>
           </motion.aside>
   
         {/* Main Content */}
@@ -105,8 +109,8 @@ export default function SubContent() {
               </p>
               <p className="mt-2 text-gray-700">
                 For any inquiry about the conference, please contact us at:{" "}
-                <a href="mailto:icdct@gmail.com" className="text-blue-600 hover:underline">
-                  icdct@gmail.com
+                <a href="mailto:springerconference@srcas.ac.in" className="text-blue-600 hover:underline">
+                springerconference@srcas.ac.in
                 </a>
               </p>
             </CardContent>
@@ -194,9 +198,9 @@ export default function SubContent() {
               </Table>
             </CardContent>
             <div className="flex justify-center">
-    <a href="/registration" className="px-6 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-md hover:bg-yellow-600 transition">
-      Submit Now
-    </a>
+            <a href="mailto:springerconference@srcas.ac.in" className="px-6 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-md hover:bg-yellow-600 transition">
+  Submit Now
+</a>
   </div><br></br>
           </Card>
         </div>

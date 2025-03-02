@@ -10,11 +10,10 @@ import { FaFileAlt, FaRegFilePdf, FaClipboardList, FaMapMarkerAlt, FaCalendarAlt
 
 export default function CallForPapers() {
   const calendarDates = [
-    { event: "Submission Deadline", date: "February 1st, 2025" },
-    { event: "Notification Date", date: "February 20th, 2025" },
-    { event: "Registration Deadline", date: "March 01st, 2025" },
-    { event: "Camera Ready", date: "March 01st, 2025" },
-    { event: "Conference Dates", date: "March 28th-30th, 2025" },
+    { event: "Submission Deadline", date: "02 May, 2025" },
+    { event: "Acceptance Notification Date", date: "15 June, 2025" },
+    { event: "Camera Ready", date: "05 July, 2025" },
+    { event: "Conference Dates", date: "06 August, 2025" },
   ];
 
   const tracks = [
@@ -123,30 +122,34 @@ export default function CallForPapers() {
           </div>
 
           <div className="mt-12 space-y-6 border-t pt-8">
-            <h3 className="text-lg font-bold text-gray-900">Resources</h3>
-            <div className="space-y-3">
-              <Button 
-                variant="outline" 
-                className="w-full justify-start gap-3 rounded-xl py-5 border-blue-100 hover:border-blue-200 bg-white hover:bg-blue-50"
-              >
-                <FileText className="h-5 w-5 text-blue-600" />
-                <div className="text-left">
-                  <p className="font-medium">Download Template</p>
-                  <p className="text-sm text-gray-500">Microsoft Word</p>
-                </div>
-              </Button>
-              <Button 
-                variant="outline" 
-                className="w-full justify-start gap-3 rounded-xl py-5 border-blue-100 hover:border-blue-200 bg-white hover:bg-blue-50"
-              >
-                <FileText className="h-5 w-5 text-blue-600" />
-                <div className="text-left">
-                  <p className="font-medium">Download Template</p>
-                  <p className="text-sm text-gray-500">LaTeX</p>
-                </div>
-              </Button>
-            </div>
-          </div>
+  <h3 className="text-lg font-bold text-gray-900">Resources</h3>
+  <div className="space-y-3">
+    <a href="/public/conference-template.docx" download className="block">
+      <Button 
+        variant="outline" 
+        className="w-full justify-start gap-3 rounded-xl py-5 border-blue-100 hover:border-blue-200 bg-white hover:bg-blue-50"
+      >
+        <FileText className="h-5 w-5 text-blue-600" />
+        <div className="text-left">
+          <p className="font-medium">Download Template</p>
+          <p className="text-sm text-gray-500">Microsoft Word</p>
+        </div>
+      </Button>
+    </a>
+    <a href="/public/templates/conference-latex-template.zip" download className="block mt-3">
+      <Button 
+        variant="outline" 
+        className="w-full justify-start gap-3 rounded-xl py-5 border-blue-100 hover:border-blue-200 bg-white hover:bg-blue-50"
+      >
+        <FileText className="h-5 w-5 text-blue-600" />
+        <div className="text-left">
+          <p className="font-medium">Download Template</p>
+          <p className="text-sm text-gray-500">LaTeX</p>
+        </div>
+      </Button>
+    </a>
+  </div>
+</div>
         </motion.aside>
   
           {/* Main Content */}
@@ -197,7 +200,7 @@ export default function CallForPapers() {
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Scopus-indexed Springer Proceedings</li>
                     <li>Extended papers in leading journals</li>
-                    <li>CCIS series publication</li>
+                    <li>ACSRA series publication</li>
                     <li>Global visibility through Springer</li>
                   </ul>
                 </div>
@@ -262,7 +265,7 @@ export default function CallForPapers() {
               <CardContent className="p-8">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-lg font-semibold mb-4">Springer CCIS Series</h3>
+                    <h3 className="text-lg font-semibold mb-4">Springer ACSRA Series</h3>
                     <ul className="space-y-3 text-gray-600">
                       <li>✓ Scopus & EI Compendex Indexed</li>
                       <li>✓ Rigorous peer-review process</li>

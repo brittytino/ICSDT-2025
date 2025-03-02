@@ -7,8 +7,8 @@ const committees = {
   leadership: [
     {
       name: "Dr. B.L Shivakumar",
-      role: "Principal & Secretary",
-      affiliation: "Sri Ramakrishna College, India",
+      role: "General Chair",
+      affiliation: "Principal & Secretary Of SRCAS, India",
       image: "/shiva1.jpg",
     },
     {
@@ -22,7 +22,7 @@ const committees = {
     {
       name: "Dr. G. Maria Pricilla",
       role: "PC Chair",
-      affiliation: "Sri Ramakrishna College",
+      affiliation: "Sri Ramakrishna College of Arts & Science",
       image: "/maria.jpg",
     },
     {
@@ -35,14 +35,14 @@ const committees = {
   organizing: [
     {
       name: "Dr. M Hemalatha",
-      role: "Organizing Committee",
-      affiliation: "Sri Ramakrishna College",
-      image: "/hema.jpg",
+      role: "PC Co-Chair",
+      affiliation: "Sri Ramakrishna College of Arts & Science",
+      image: "/hema.jpeg",
     },
     {
       name: "Dr. N. Mahendiren",
-      role: "Organizing Committee",
-      affiliation: "Sri Ramakrishna College",
+      role: "PC Co-Chair",
+      affiliation: "Sri Ramakrishna College of Arts & Science",
       image: "/mah.jpg",
     },
   ],
@@ -155,7 +155,7 @@ export const Speakers = () => {
           <div className="w-px bg-gray-200 hidden lg:block" />
 
           <CommitteeSection
-            title="Organizing Committee"
+            title="PC Co-Chairs"
             members={committees.organizing}
             icon={Users}
             color="text-green-500"

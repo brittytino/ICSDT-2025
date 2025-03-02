@@ -98,8 +98,8 @@ export const About = () => {
           <p className="text-lg text-gray-700 text-center max-w-4xl mx-auto leading-relaxed">
             All submitted papers will undergo a rigorous peer-review process by experts in the field, with review
             results announced within 15 to 20 days. Accepted, registered, and presented papers will be published
-            in the prestigious <span className="font-semibold text-primary">Springer CCIS</span> series Conference
-            Proceedings (Electronic ISSN: 1865-0937; Print ISSN: 1865-0929).
+            in the prestigious <span className="font-semibold text-primary">Springer ACSRA</span> series Conference
+            Proceedings.
           </p>
           <p className="text-lg text-gray-700 text-center mt-6 max-w-4xl mx-auto leading-relaxed">
             These proceedings will be indexed in
