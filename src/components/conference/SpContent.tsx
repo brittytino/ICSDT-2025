@@ -63,7 +63,7 @@ const SpContent = () => {
 
 const speakers = [
   {
-    name: "Prof. Emeritus Dato' Ts. Dr. Tengku Mohd Bin Tengku Sembok",
+    name: "Prof. Dr. Tengku Mohd Bin Sembok",
     title: "Professor, IIUM Gombak Campus",
     affiliation: "Kulliyyah of Information and Communication Technology",
     image: "/tengku.jpeg",
@@ -79,12 +79,12 @@ const speakers = [
     email: "mijal@infotech.com",
   },
   {
-    name: "Mr. Sujal Patel",
-    title: "Mobile and Web Application Architect",
-    affiliation: "moxDroid Labs Inc., Toronto, Canada",
-    image: "/mob.jpg",
-    specializations: ["Mobile Development", "Full Stack Development", "AI & ML"],
-    email: "tino@moxdroid.com",
+    name: "Prof. Dr. Akram M Z M Khedher",
+    title: "Professor, IIUM Gombak Campus",
+    affiliation: "Kulliyyah of Information and Communication Technology",
+    image: "/akram.jpeg",
+    specializations: ["Natural Science","Mathematical Sciences", "Applied Statistics"],
+    email: "akramzeki@iium.edu.my",
   },
 ];
 

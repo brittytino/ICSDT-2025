@@ -160,19 +160,17 @@ export default function CallForPapers() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <Badge variant="outline" className="mb-4 bg-blue-100 text-blue-600">
-            <Globe className="mr-2 h-4 w-4" /> Hybrid Event
-          </Badge>
+
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             International Conference on Sustainable Digital Transformation 2025
           </h1>
           <div className="flex justify-center items-center gap-4 text-gray-600">
             <div className="flex items-center">
               <Calendar className="mr-2 h-5 w-5" />
-              <span>March 28-30, 2025</span>
+              <span>August 6, 2025</span>
             </div>
             <span>•</span>
-            <span>Sri Ramakrishna College of Arts & Science, Coimbatore</span>
+            <span>INTI University,Malaysia</span>
           </div>
         </motion.div>
 
