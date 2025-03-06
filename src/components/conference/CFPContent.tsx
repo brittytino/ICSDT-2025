@@ -189,7 +189,7 @@ export default function CallForPapers() {
                   <div className="flex items-center gap-2 bg-green-50 p-4 rounded-lg">
                     <CheckCircle className="h-6 w-6 text-green-600" />
                     <span className="text-green-700">
-                      Technically sponsored by Soft Computing Research Society
+                    Published in SCOPUS indexed Springer Book Series - 'ACSRA'
                     </span>
                   </div>
                 </div>
@@ -265,7 +265,6 @@ export default function CallForPapers() {
                   <div>
                     <h3 className="text-lg font-semibold mb-4">Springer ACSRA Series</h3>
                     <ul className="space-y-3 text-gray-600">
-                      <li>✓ Scopus & EI Compendex Indexed</li>
                       <li>✓ Rigorous peer-review process</li>
                       <li>✓ Global distribution</li>
                       <li>✓ Open Access options</li>
