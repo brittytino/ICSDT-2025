@@ -283,10 +283,10 @@ const AboutPage = () => {
               
               <div className="space-y-8">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Accepted papers will be published in the Springer ACSRA series, indexed in 
-                  <span className="font-semibold text-blue-600"> Scopus, EI Compendex, </span> 
+                  Accepted papers will be published in the Springer ACSRA series</p>
+                  {/* <span className="font-semibold text-blue-600"> Scopus, EI Compendex, </span> 
                   and other leading databases, ensuring global visibility for your research.
-                </p>
+                </p> */}
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="p-6 bg-gray-50 rounded-xl border border-blue-100">

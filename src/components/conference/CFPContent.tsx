@@ -55,7 +55,7 @@ export default function CallForPapers() {
   const submissions = [
     {
       type: "Full-Length Paper",
-      details: "Published in Springer LNNS (Scopus-indexed)",
+      details: "Published in Springer (ACSRA series)",
       requirements: "6-8 pages",
       icon: <BookOpen className="h-5 w-5" />,
     },
@@ -189,14 +189,13 @@ export default function CallForPapers() {
                   <div className="flex items-center gap-2 bg-green-50 p-4 rounded-lg">
                     <CheckCircle className="h-6 w-6 text-green-600" />
                     <span className="text-green-700">
-                    Published in SCOPUS indexed Springer Book Series - 'ACSRA'
+                    Published in Springer ACSRA series
                     </span>
                   </div>
                 </div>
                 <div className="space-y-4">
                   <h3 className="font-semibold text-gray-800">Publication Highlights</h3>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>Scopus-indexed Springer Proceedings</li>
                     <li>Extended papers in leading journals</li>
                     <li>ACSRA series publication</li>
                     <li>Global visibility through Springer</li>

@@ -101,11 +101,11 @@ export const About = () => {
             in the prestigious <span className="font-semibold text-primary">Springer ACSRA</span> series Conference
             Proceedings.
           </p>
-          <p className="text-lg text-gray-700 text-center mt-6 max-w-4xl mx-auto leading-relaxed">
+          {/* <p className="text-lg text-gray-700 text-center mt-6 max-w-4xl mx-auto leading-relaxed">
             These proceedings will be indexed in
             <span className="font-semibold text-primary"> Ei Compendex, Scopus, and other major academic databases</span>,
             ensuring high visibility and academic recognition.
-          </p>
+          </p> */}
           <div className="mt-10 flex flex-col md:flex-row justify-center items-center gap-6">
             <div className="bg-gray-100 p-6 rounded-lg shadow-lg max-w-md text-center">
               <h4 className="text-xl font-bold text-primary mb-3">Springer Publishing</h4>
