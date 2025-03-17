@@ -167,6 +167,10 @@ const Contact = () => {
                     <span>August 6, 2025</span>
                   </div>
                   <div className="flex items-center space-x-2 text-muted-foreground">
+                  <Phone className="h-4 w-4" />
+                  <span>+60 19-633 2786</span>
+                  </div>
+                  <div className="flex items-center space-x-2 text-muted-foreground">
                     <MapPin className="h-4 w-4" />
                     <span>INTI UNIVERSITY
                     Nilai, Malaysia</span>

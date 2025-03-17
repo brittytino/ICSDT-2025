@@ -8,7 +8,7 @@ export const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://img.freepik.com/free-photo/view-landmark-asian-sky-reflection_1417-266.jpg?t=st=1741245451~exp=1741249051~hmac=5a62aaaee34d1d7b9906f589ef6b0e024b807c6f9dbceaac789c96cd420a2dfc&w=2000"
+          src="https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg?cs=srgb&dl=pexels-pixabay-302769.jpg&fm=jpg"
           alt="Modern building"
           className="h-full w-full object-cover"
         />
@@ -61,7 +61,7 @@ export const Hero = () => {
           <div className="my-10 flex flex-col items-center gap-6 md:flex-row md:justify-center">
             <motion.div 
               whileHover={{ y: -5 }}
-              className="rounded-xl bg-white/90 p-4 shadow-lg backdrop-blur-md"
+              className="rounded-xl bg-white p-4 shadow-lg backdrop-blur-md"
             >
               <img
                 src="/srcas.png"
@@ -72,7 +72,7 @@ export const Hero = () => {
             <div className="text-xl font-bold text-white/90 md:mx-4">in association with</div>
             <motion.div 
               whileHover={{ y: -5 }}
-              className="rounded-xl bg-white/90 p-4 shadow-lg backdrop-blur-md"
+              className="rounded-xl bg-white p-4 shadow-lg backdrop-blur-md"
             >
               <img
                 src="/inti1.png"

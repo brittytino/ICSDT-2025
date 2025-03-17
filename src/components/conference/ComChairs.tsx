@@ -66,11 +66,11 @@ const committeeData = [
   {
     title: "Publicity Chairs",
     members: [
-      "INTI University, Malaysia",
-      "Mr.A.Sunil Samson M.Sc.,M.Phil, Sri Ramakrishna College of Arts & Science",
-      "Dr. N. Mahendiran, Assistant Professor, MCA, M.Phil, Ph.D, Sri Ramakrishna College of Arts & Science, Tamilnadu India",
+      "Dr. Malathy Batumalay, INTI University, Malaysia",
       "Ms. Nor Anis Adila Mohamad, INTI University, Malaysia",
       "Ms. Malini Chandran, INTI University, Malaysia",
+      "Mr. A.Sunil Samson M.Sc.,M.Phil, Sri Ramakrishna College of Arts & Science",
+      "Dr. N. Mahendiran, MCA, M.Phil, Ph.D, Sri Ramakrishna College of Arts & Science",
     ],
   },
   {
