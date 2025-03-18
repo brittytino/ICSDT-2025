@@ -49,13 +49,13 @@ const committees = {
       name: "Dr. Deshinta Arrova Dewi",
       role: "PC Co-Chair",
       affiliation: "INTI University",
-      image: "/prof.jpg",
+      image: "/deshinta.jpeg",
     },
     {
       name: "Dr. Malathy Batumalay",
       role: "PC Co-Chair",
       affiliation: "INTI University",
-      image: "/prof.jpg",
+      image: "/malathy.jpeg",
     },
   ],
 };
