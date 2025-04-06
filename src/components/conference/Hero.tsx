@@ -118,7 +118,7 @@ export const Hero = () => {
           animate={{ x: ["100%", "-100%"] }}
           transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
         >
-          <span>The after-conference proceeding of the ICCCT 2025 will be published in Springer Book Series, 'ACSRA  - Advanced Computer Science Research and Application'</span>
+          {/* <span>The after-conference proceeding of the ICCCT 2025 will be published in Springer Book Series, 'ACSRA  - Advanced Computer Science Research and Application'</span> */}
         </motion.div>
       </motion.div>
     </div>

@@ -282,8 +282,8 @@ const AboutPage = () => {
               </div>
               
               <div className="space-y-8">
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Accepted papers will be published in the Springer ACSRA series</p>
+                {/* <p className="text-lg text-gray-700 leading-relaxed">
+                  Accepted papers will be published in the Springer ACSRA series</p> */}
                   {/* <span className="font-semibold text-blue-600"> Scopus, EI Compendex, </span> 
                   and other leading databases, ensuring global visibility for your research.
                 </p> */}

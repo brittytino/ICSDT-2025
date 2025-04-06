@@ -55,7 +55,7 @@ export default function CallForPapers() {
   const submissions = [
     {
       type: "Full-Length Paper",
-      details: "Published in Springer (ACSRA series)",
+      details: "", //Published in Springer (ACSRA series)
       requirements: "6-8 pages",
       icon: <BookOpen className="h-5 w-5" />,
     },
@@ -188,9 +188,9 @@ export default function CallForPapers() {
                   </p>
                   <div className="flex items-center gap-2 bg-green-50 p-4 rounded-lg">
                     <CheckCircle className="h-6 w-6 text-green-600" />
-                    <span className="text-green-700">
+                    {/* <span className="text-green-700">
                     Published in Springer ACSRA series
-                    </span>
+                    </span> */}
                   </div>
                 </div>
                 <div className="space-y-4">
@@ -262,7 +262,7 @@ export default function CallForPapers() {
               <CardContent className="p-8">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-lg font-semibold mb-4">Springer ACSRA Series</h3>
+                    {/* <h3 className="text-lg font-semibold mb-4">Springer ACSRA Series</h3> */}
                     <ul className="space-y-3 text-gray-600">
                       <li>✓ Rigorous peer-review process</li>
                       <li>✓ Global distribution</li>
